@@ -3,6 +3,10 @@
 	<persistence-unit name="exercicios_jpa">
 		<class>
 			modelo.basico.Usuario
+			
+		</class>
+		<class>
+			modelo.basico.Produto
 		</class>
 		 <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- DB Driver -->
