@@ -32,7 +32,7 @@ public class DAO<E > {
 		return this;
 	}
 	public DAO<E> fecharT(){
-		em.getTransaction().commit();;
+		em.getTransaction().commit();
 		return this;
 	}
 	public DAO<E> Incluir(E entidade){
