@@ -51,9 +51,13 @@ public class DAO<E > {
 			throw new UnsupportedOperationException("Classe está nula");
 		}
 		String jpql = "select e from "+classe.getName()+" e";
+		this.abrirT();
+		
 		TypedQuery<E> query = em.createQuery(jpql,classe);
 		query.setMaxResults(qtd);
 		query.setFirstResult(deslocamento);
+		
+		this.fecharT();
 		
 		return query.getResultList();
 	}
