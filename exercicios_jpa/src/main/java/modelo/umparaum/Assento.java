@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Assento {
@@ -13,6 +14,9 @@ public class Assento {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String nome;
+	
+	@OneToOne(mappedBy = "assento")
+	private Cliente cliente;
 	public Assento() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -48,10 +52,17 @@ public class Assento {
 		Assento other = (Assento) obj;
 		return Objects.equals(id, other.id);
 	}
+	public Cliente getCliente() {
+		return cliente;
+	}
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
 	@Override
 	public String toString() {
-		return "Assento [id=" + id + ", nome=" + nome + "]";
+		return "Assento [id=" + id + ", nome=" + nome + ", cliente=" + cliente + "]";
 	}
+	
 	
 	
 }
