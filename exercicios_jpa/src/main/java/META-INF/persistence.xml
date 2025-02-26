@@ -10,6 +10,8 @@
 		</class>
 		<class>modelo.umparaum.Assento</class>
 		<class>modelo.umparaum.Cliente</class>
+		<class>modelo.umparamuitos.Pedido</class>
+		<class>modelo.umparamuitos.ItemPedido</class>
 		 <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- DB Driver -->
             <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5433/curso-java" /> <!-- BD Mane -->
